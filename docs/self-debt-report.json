@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-04-14T04:41:36.648783",
+  "date": "2026-04-14",
+  "scan_id": "509b0a00",
+  "debt_score": 100,
+  "total_items": 18,
+  "critical": 0,
+  "high": 4,
+  "medium": 11,
+  "low": 3,
+  "estimated_hours": 20.0,
+  "top_roadmap_items": [
+    {
+      "rank": 1,
+      "category": "annotated_debt",
+      "description": "FIXME: urgent bug\\n# TODO: cleanup\\n\")",
+      "file_path": "tests/test_api.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 2,
+      "category": "annotated_debt",
+      "description": "FIXME: fix me\\n\")",
+      "file_path": "tests/test_api.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 3,
+      "category": "annotated_debt",
+      "description": "FIXME: handle edge case for negative values",
+      "file_path": "tests/test_scanners.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 4,
+      "category": "annotated_debt",
+      "description": "FIXME: critical bug here\\n\")",
+      "file_path": "tests/test_scanners.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 5,
+      "category": "complexity",
+      "description": "High complexity (score=10): scan_complexity (complexity=10)",
+      "file_path": "src/techdebt/scanners/complexity.py",
+      "severity": "medium",
+      "estimated_hours": 5.0,
+      "business_value": "Reduces incident blast radius and improves onboarding speed",
+      "recommended_sprint": 1
+    }
+  ]
+}
