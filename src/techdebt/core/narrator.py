@@ -13,8 +13,8 @@ def generate_debt_narrative(summary: DebtSummary, industry: str = "fintech") -> 
         return _fallback_narrative(summary, industry)
 
     try:
-        import anthropic
-        client = anthropic.Anthropic(api_key=api_key)
+        from openai import OpenAI
+        client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_key)
 
         prompt = f"""You are an engineering director presenting a tech debt assessment to leadership in a {industry} company.
 
@@ -35,12 +35,12 @@ Write a 3-paragraph executive summary that:
 Use language appropriate for engineering leadership in a regulated {industry} environment.
 Be specific, practical, and connect debt to delivery risk and compliance implications."""
 
-        message = client.messages.create(
-            model="claude-sonnet-4-20250514",
+        message = client.chat.completions.create(
+            model="meta-llama/llama-3.1-8b-instruct:free",
             max_tokens=500,
             messages=[{"role": "user", "content": prompt}],
         )
-        return message.content[0].text
+        return message.choices[0].message.content
 
     except Exception:
         return _fallback_narrative(summary, industry)
@@ -48,7 +48,7 @@ Be specific, practical, and connect debt to delivery risk and compliance implica
 
 def _fallback_narrative(summary: DebtSummary, industry: str) -> str:
     risk = "critical" if summary.debt_score >= 70 else "elevated" if summary.debt_score >= 40 else "manageable"
-    return f"""## Tech Debt Assessment — {summary.repo_name}
+    return f"""## Tech Debt Assessment â€” {summary.repo_name}
 
 **Overall debt posture is {risk}** with a debt score of {summary.debt_score}/100.
 The codebase contains {summary.total_items} debt items requiring approximately
@@ -56,7 +56,7 @@ The codebase contains {summary.total_items} debt items requiring approximately
 
 {"**Immediate action required**: " + str(summary.critical_items) + " critical items were identified that pose significant delivery and compliance risk." if summary.critical_items > 0 else "No critical debt items were identified."}
 {summary.complexity_hotspots} complexity hotspots increase incident blast radius and slow onboarding.
-{summary.stale_dependencies} stale dependencies may carry unpatched CVEs — a compliance risk in {industry} environments.
+{summary.stale_dependencies} stale dependencies may carry unpatched CVEs â€” a compliance risk in {industry} environments.
 
 **Recommended approach**: Address critical and high severity items in the next sprint ({summary.critical_items + summary.high_items} items, ~{round((summary.critical_items * 8 + summary.high_items * 4), 0)} hours).
 Schedule medium severity items over the following two sprints. Establish a debt budget of 20% of engineering capacity to prevent accumulation.

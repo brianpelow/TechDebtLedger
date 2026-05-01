@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "TechDebtLedger"
 version = "0.1.0"
-description = "Automated tech debt tracker — scans repos for complexity hotspots and surfaces a prioritized payoff roadmap"
+description = "Automated tech debt tracker â€” scans repos for complexity hotspots and surfaces a prioritized payoff roadmap"
 readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.12"
@@ -16,7 +16,7 @@ dependencies = [
     "uvicorn>=0.30.0",
     "httpx>=0.27.0",
     "pydantic>=2.7.0",
-    "anthropic>=0.28.0",
+    "openai>=1.30.0",
     "pyyaml>=6.0.1",
     "rich>=13.7.0",
     "gitpython>=3.1.43",
