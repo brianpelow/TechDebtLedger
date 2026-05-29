@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-28T06:04:56.258788",
-  "date": "2026-05-28",
-  "scan_id": "695fb755",
+  "generated_at": "2026-05-29T06:07:01.985110",
+  "date": "2026-05-29",
+  "scan_id": "9e9b52e3",
   "debt_score": 100,
   "total_items": 18,
   "critical": 0,
@@ -13,26 +13,6 @@
     {
       "rank": 1,
       "category": "annotated_debt",
-      "description": "FIXME: handle edge case for negative values",
-      "file_path": "tests/test_scanners.py",
-      "severity": "high",
-      "estimated_hours": 1.0,
-      "business_value": "Addresses known issues before they become incidents",
-      "recommended_sprint": 1
-    },
-    {
-      "rank": 2,
-      "category": "annotated_debt",
-      "description": "FIXME: critical bug here\\n\")",
-      "file_path": "tests/test_scanners.py",
-      "severity": "high",
-      "estimated_hours": 1.0,
-      "business_value": "Addresses known issues before they become incidents",
-      "recommended_sprint": 1
-    },
-    {
-      "rank": 3,
-      "category": "annotated_debt",
       "description": "FIXME: urgent bug\\n# TODO: cleanup\\n\")",
       "file_path": "tests/test_api.py",
       "severity": "high",
@@ -41,7 +21,7 @@
       "recommended_sprint": 1
     },
     {
-      "rank": 4,
+      "rank": 2,
       "category": "annotated_debt",
       "description": "FIXME: fix me\\n\")",
       "file_path": "tests/test_api.py",
@@ -51,10 +31,30 @@
       "recommended_sprint": 1
     },
     {
+      "rank": 3,
+      "category": "annotated_debt",
+      "description": "FIXME: handle edge case for negative values",
+      "file_path": "tests/test_scanners.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 4,
+      "category": "annotated_debt",
+      "description": "FIXME: critical bug here\\n\")",
+      "file_path": "tests/test_scanners.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
       "rank": 5,
       "category": "complexity",
-      "description": "High complexity (score=10): scan_todos (complexity=10)",
-      "file_path": "src/techdebt/scanners/todos.py",
+      "description": "High complexity (score=10): scan_complexity (complexity=10)",
+      "file_path": "src/techdebt/scanners/complexity.py",
       "severity": "medium",
       "estimated_hours": 5.0,
       "business_value": "Reduces incident blast radius and improves onboarding speed",
