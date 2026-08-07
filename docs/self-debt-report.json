@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-06T05:10:28.930062",
-  "date": "2026-08-06",
-  "scan_id": "48933afe",
+  "generated_at": "2026-08-07T04:21:07.201503",
+  "date": "2026-08-07",
+  "scan_id": "bbf0afae",
   "debt_score": 100,
   "total_items": 18,
   "critical": 0,
@@ -53,8 +53,8 @@
     {
       "rank": 5,
       "category": "complexity",
-      "description": "High complexity (score=10): scan_complexity (complexity=10)",
-      "file_path": "src/techdebt/scanners/complexity.py",
+      "description": "High complexity (score=10): scan_todos (complexity=10)",
+      "file_path": "src/techdebt/scanners/todos.py",
       "severity": "medium",
       "estimated_hours": 5.0,
       "business_value": "Reduces incident blast radius and improves onboarding speed",
