@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-02T06:41:06.726595",
-  "date": "2026-09-02",
-  "scan_id": "b3220a70",
+  "generated_at": "2026-09-03T06:43:54.333598",
+  "date": "2026-09-03",
+  "scan_id": "5a9d6b13",
   "debt_score": 100,
   "total_items": 18,
   "critical": 0,
@@ -13,26 +13,6 @@
     {
       "rank": 1,
       "category": "annotated_debt",
-      "description": "FIXME: handle edge case for negative values",
-      "file_path": "tests/test_scanners.py",
-      "severity": "high",
-      "estimated_hours": 1.0,
-      "business_value": "Addresses known issues before they become incidents",
-      "recommended_sprint": 1
-    },
-    {
-      "rank": 2,
-      "category": "annotated_debt",
-      "description": "FIXME: critical bug here\\n\")",
-      "file_path": "tests/test_scanners.py",
-      "severity": "high",
-      "estimated_hours": 1.0,
-      "business_value": "Addresses known issues before they become incidents",
-      "recommended_sprint": 1
-    },
-    {
-      "rank": 3,
-      "category": "annotated_debt",
       "description": "FIXME: urgent bug\\n# TODO: cleanup\\n\")",
       "file_path": "tests/test_api.py",
       "severity": "high",
@@ -41,10 +21,30 @@
       "recommended_sprint": 1
     },
     {
-      "rank": 4,
+      "rank": 2,
       "category": "annotated_debt",
       "description": "FIXME: fix me\\n\")",
       "file_path": "tests/test_api.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 3,
+      "category": "annotated_debt",
+      "description": "FIXME: handle edge case for negative values",
+      "file_path": "tests/test_scanners.py",
+      "severity": "high",
+      "estimated_hours": 1.0,
+      "business_value": "Addresses known issues before they become incidents",
+      "recommended_sprint": 1
+    },
+    {
+      "rank": 4,
+      "category": "annotated_debt",
+      "description": "FIXME: critical bug here\\n\")",
+      "file_path": "tests/test_scanners.py",
       "severity": "high",
       "estimated_hours": 1.0,
       "business_value": "Addresses known issues before they become incidents",
